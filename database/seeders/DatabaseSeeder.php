@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\CelularSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,7 +13,12 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
+    
     {
+        $this->call([
+            CelularSeeder::class,
+        ]);
+
         // \App\Models\User::factory(10)->create();
     }
 }
