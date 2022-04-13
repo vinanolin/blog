@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Celular;
+use Illuminate\Foundation\Console\ViewCacheCommand;
 use Illuminate\Http\Request;
 
 class CelularController extends Controller
@@ -13,7 +15,8 @@ class CelularController extends Controller
      */
     public function index()
     {
-        //
+        $celulares = Celular::orderBy('nome', 'ASC')->get();
+        return view('celular.index', ['celulares' => $celulares]);
     }
 
     /**
