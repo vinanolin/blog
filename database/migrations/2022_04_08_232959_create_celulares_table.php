@@ -17,7 +17,6 @@ class CreateCelularesTable extends Migration
             $table->id();
             $table->string('nome');
             $table->float('valor');
-            $table->text('descricao');
             $table->timestamps();
         });
     }
